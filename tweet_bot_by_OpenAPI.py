@@ -136,7 +136,7 @@ def get_stream(headers):
                                     conversations_sread = conversations_sread + str(json_response["data"][j]['text'])
                         
                         # Generate a reply using the openai chatgpt model
-                        reply_text = f"「{conversations_sread}」この括弧内に会話があればその経緯や状況を考慮しつつ、@{account}風の話し方で「{reply_text}」に対する返事を「」と@を使わずにしてください。"
+                        reply_text = f"「{conversations_sread}」この括弧内に会話があればその経緯や状況を考慮しつつ、@{account}風の話し方で語尾ににゃんをつけて、「{reply_text}」に対する返事を「」と@を使わずにしてください。"
 
                         response = openai.Completion.create(
                             engine="text-davinci-003",
